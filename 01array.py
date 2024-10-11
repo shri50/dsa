@@ -10,7 +10,7 @@ def linear_search(arr,n):
             return i
     return None
 
-if __name__ == "__main__":
+def call_linear_search():
     arr = input("Input the number with space as separation").split()
     # arr = arr.split()
     n = input("Input no to search:")
@@ -19,3 +19,25 @@ if __name__ == "__main__":
         print(f"{n} is no present")
     else:
         print(f"{n} is present in list at index={result}")
+
+
+# Program to find largest element in an Array
+
+def largest_element(arr):
+    """
+    find largest element from array
+    """
+    max = arr[0]
+    for i in range(1,len(arr)):
+        if arr[i] > max:
+            max = arr[i]
+    return max
+
+def call_largest_element():
+    arr = input("Input the number with space as separation").split()
+    # arr = arr.split()
+    result = largest_element(arr)
+    print(f"Largest element in arr = {result}")
+
+if __name__ == "__main__":
+    call_largest_element()
