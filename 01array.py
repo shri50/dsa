@@ -52,20 +52,18 @@ def second_largest_element(arr):
     return:
         result : second largest number
     """
+    len_arr =  len(arr)
+    largest = -1
+    second_largest = -1
 
-    maxno = arr[0]
-    second_largest = arr[0]
-
-    for i in range(1,len(arr)):
-        if arr[i] < second_largest:
-            maxno = arr[i]
-        else:
+    for i in range(len_arr):
+        if arr[i] > largest:
+            second_largest = largest
+            largest = arr[i]
+        elif arr[i] < largest and arr[i]> second_largest:
             second_largest = arr[i]
     
-    if maxno == second_largest:
-        return -1
-    else:
-        return second_largest
+    return second_largest
 
 def call_second_element():
     arr1 = [12, 35, 1, 10, 34, 1]
