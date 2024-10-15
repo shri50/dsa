@@ -39,5 +39,24 @@ def call_largest_element():
     result = largest_element(arr)
     print(f"Largest element in arr = {result}")
 
+
+# Find second largest element in an array
+
+def second_largest_element(arr):
+    """
+    to find secodn largest element from the arr
+
+    param: 
+        arr : input array 
+
+    return:
+        result : second largest number
+    """
+
+    max = arr[i]
+    second_largest = arr[i]
+
+    for 
+
 if __name__ == "__main__":
     call_largest_element()
