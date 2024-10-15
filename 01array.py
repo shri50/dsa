@@ -109,13 +109,15 @@ def three_largest_element(arr):
 
         return first_item, second_item, third_item
     else: 
-        return arr.sort()
+        arr.sort()
+        arr =list(set(arr))
+        return arr
 
 def call_three_largest_element():
     arr1 = [10, 4, 3, 50, 23, 90]
     arr2 = [6, 8, 9, 2, 1, 10]
     arr3 = [10, 9, 9]
-    arr4 = [10, 10, 10]
+    arr4 = [10, 10]
     arr5 = []
 
     res1 = three_largest_element(arr1)
