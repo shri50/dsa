@@ -34,10 +34,14 @@ def largest_element(arr):
     return max
 
 def call_largest_element():
-    arr = input("Input the number with space as separation").split()
-    # arr = arr.split()
-    result = largest_element(arr)
-    print(f"Largest element in arr = {result}")
+    arr1 = [10, 20, 4]
+    arr2 = [20, 10, 20, 4, 100]
+
+    res1 = largest_element(arr1)
+    res2 = largest_element(arr2)
+
+    print(f"largest element in array = {res1}")
+    print(f"largest element in array = {res2}")
 
 
 # Find second largest element in an array
@@ -78,6 +82,56 @@ def call_second_element():
     print(f"Second Largest element in arr = {result2}")
     print(f"Second Largest element in arr = {result3}")
 
+
+# Find the largest three distinct elements in an array
+def three_largest_element(arr):
+    """
+    to find three largest distinct element from the array
+
+    param: 
+        arr : input array 
+
+    return:
+        result : three largest distict element
+    """
+    if len(arr) >= 3:
+        first_item = float('-inf')
+        second_item = float('-inf')
+        third_item = float('-inf')
+
+        for i in range(len(arr)):
+            if arr[i] > first_item:
+                first_item, second_item, third_item = arr[i], first_item, second_item
+            elif arr[i] > second_item and arr[i] != first_item:
+                second_item, third_item = arr[i], second_item
+            elif arr[i] > third_item and arr[i] != first_item and arr[i] != second_item:
+                third_item = arr[i]
+
+        return first_item, second_item, third_item
+    else: 
+        return arr.sort()
+
+def call_three_largest_element():
+    arr1 = [10, 4, 3, 50, 23, 90]
+    arr2 = [6, 8, 9, 2, 1, 10]
+    arr3 = [10, 9, 9]
+    arr4 = [10, 10, 10]
+    arr5 = []
+
+    res1 = three_largest_element(arr1)
+    res2 = three_largest_element(arr2)
+    res3 = three_largest_element(arr3)
+    res4 = three_largest_element(arr4)
+    res5 = three_largest_element(arr5)
+
+    print(f"result for the three largest element from the array = {res1}")
+    print(f"result for the three largest element from the array = {res2}")
+    print(f"result for the three largest element from the array = {res3}")
+    print(f"result for the three largest element from the array = {res4}")
+    print(f"result for the three largest element from the array = {res5}")
+    
+
 if __name__ == "__main__":
     # call_largest_element()
-    call_second_element()
+    # call_second_element()
+    call_three_largest_element()
