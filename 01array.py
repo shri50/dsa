@@ -134,6 +134,6 @@ def call_three_largest_element():
     
 
 if __name__ == "__main__":
-    # call_largest_element()
-    # call_second_element()
+    call_largest_element()
+    call_second_element()
     call_three_largest_element()
