@@ -132,8 +132,37 @@ def call_three_largest_element():
     print(f"result for the three largest element from the array = {res4}")
     print(f"result for the three largest element from the array = {res5}")
     
+# Leaders in an array
+def find_leader(arr):
+    """
+    param:
+        arr (list) : input array 
+    
+    return: 
+        result (int): leader in array
+    """
+    leader_element_arr = [] 
+    max= 0
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i+1]:
+            max = arr[i]
+            leader_element_arr.append(arr[i])
+    leader_element_arr.sort(reverse=True)
+    return leader_element_arr
+
+
+def call_find_leader():
+    arr1 = [16, 17, 4, 3, 5, 2]
+    result1 =  find_leader(arr1)
+    print(f"Leader from arr = {result1}")
+    
+    arr2 = [1, 2, 3, 4, 5, 2]
+    result2 =  find_leader(arr2)
+    print(f"Leader from arr = {result2}")
+
 
 if __name__ == "__main__":
-    call_largest_element()
-    call_second_element()
-    call_three_largest_element()
+    call_find_leader()
+    # call_largest_element()
+    # call_second_element()
+    # call_three_largest_element()
