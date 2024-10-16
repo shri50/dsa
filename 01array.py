@@ -156,9 +156,9 @@ def call_find_leader():
     result1 =  find_leader(arr1)
     print(f"Leader from arr = {result1}")
     
-    arr2 = [1, 2, 3, 4, 5, 2]
-    result2 =  find_leader(arr2)
-    print(f"Leader from arr = {result2}")
+    # arr2 = [1, 2, 3, 4, 5, 2]
+    # result2 =  find_leader(arr2)
+    # print(f"Leader from arr = {result2}")
 
 
 if __name__ == "__main__":
