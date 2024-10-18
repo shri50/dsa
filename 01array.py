@@ -163,6 +163,6 @@ def call_find_leader():
 
 if __name__ == "__main__":
     call_find_leader()
-    # call_largest_element()
-    # call_second_element()
-    # call_three_largest_element()
+    call_largest_element()
+    call_second_element()
+    call_three_largest_element()
