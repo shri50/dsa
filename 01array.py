@@ -193,7 +193,14 @@ def call_check_sorted_array()-> bool:
     print(res3)
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     call_check_sorted_array()
     # call_largest_element()
     # call_second_element()
     # call_three_largest_element()
+=======
+    call_find_leader()
+    call_largest_element()
+    call_second_element()
+    call_three_largest_element()
+>>>>>>> 0aa45950196fed598ba31a62c367f89aa271f1a8
