@@ -160,9 +160,40 @@ def call_find_leader():
     result2 =  find_leader(arr2)
     print(f"Leader from arr = {result2}")
 
+# Program to check if an array is sorted or not (Iterative and Recursive)
+
+# Leaders in an array
+def check_sorted_array(arr):
+    """
+    param:
+        arr (list) : input array 
+    
+    return: 
+        result (bool): result
+    """
+    for i in range(1,len(arr)):
+        if arr[i] >= arr[i-1]:
+            continue
+        else:
+            return False
+    return True
+
+
+def call_check_sorted_array()-> bool:
+    arr1 = [20, 21, 45, 89, 89, 90]
+    arr2 = [20, 20, 45, 89, 89, 90]
+    arr3 = [20, 20, 78, 98, 99, 97]
+
+    res1 = check_sorted_array(arr1)
+    res2 = check_sorted_array(arr2)
+    res3 = check_sorted_array(arr3)
+
+    print(res1)
+    print(res2)
+    print(res3)
 
 if __name__ == "__main__":
-    call_find_leader()
+    call_check_sorted_array()
     # call_largest_element()
     # call_second_element()
     # call_three_largest_element()
